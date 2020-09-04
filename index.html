@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap Online 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+    <script>
+    // Header
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > 100) {
+            $("header").addClass("show");
+        } else {
+            $("header").removeClass("show");
+        }
+    });
+    // Responsive menu
+    $(document).ready(function() {
+            $('.open-menu').on('click', function () {
+                let $menu = $('.nav-list-menu');
+            if($menu.hasClass('all')) {
+                $menu.removeClass('all');
+            } else {
+                $menu.addClass('all');
+            }
+        })
+    });
+    </script>
+</head>
+<body>
+    <!-- Start header -->
+    <header>
+        <div class="container">
+            <div class="row" id="row-header">
+                <div class="col-md-6">
+                    <form class="select-lang" style="float: left; width: 170px; padding: 10px 10px;">
+                        <img src="img/vietnam.jpg" alt="Vietnam" width="30%"> 
+                        <select name="cars" style="background: black; color: white;">
+                            <option selected>Language</option>
+                            <option value="US">US</option>
+                            <option  value="VN">Vietnam</option>
+                        </select>
+                    </form>
+                    <div class="content" style="display:flex;">
+                        <p class="border-r">FAQ</p>
+                        <p class="border-r">Contact</p>
+                        <p class="p-small"><i class="fa fa-phone"></i>+(123)46-7890</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col" id="content-r">
+                    <div class="content-r" style="display:flex">
+                        <p class="content-r" style="color: white;">MON-FRI: 09:00 AM - 10:00 PM</p>
+                        <a class="active" href="https://www.facebook.com/profile.php?id=100032736788526" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="active" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="active" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="active" href=""><i class="fab fa-vimeo-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Start menu -->
+            <nav class="navbar" id="menu"> 
+                <a class="navbar-brand" id="logo" href="">
+                    <img src="img/logo1.png" alt="logo">
+                </a>
+                <button class="btn open-menu"><i class="fa fa-align-justify"></i></button>
+                <ul class="menu nav-list-menu">
+                    <li class="nav-item"><a class="link" href="">HOME</a>
+                        <ul class="list-menu">
+                            <li class="nav-item"><a class="list-nav-item" href="">HOME1</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">HOME2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="link" href="">PAGES</a></li>
+                    <li class="nav-item"><a class="link" href="">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="link" href="">BLOG</a>
+                        <ul class="list-menu">
+                            <li class="nav-item"><a class="list-nav-item" href="">BLOG1</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">BLOG2</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">BLOG3</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">BLOG4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="link" href="">SHOP</a>
+                        <ul class="list-menu">
+                            <li class="nav-item"><a class="list-nav-item" href="">SHOP1</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">SHOP2</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">SHOP3</a></li>
+                            <li class="nav-item"><a class="list-nav-item" href="">SHOP4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="link" href="">ELEMENTS</a></li>
+                    <li class="nav-item"><a class="link" href="">FEATURES</a></li>
+                </ul>
+            </nav>
+            <!-- End menu -->
+        </div>
+    </header>
+    <!-- End header -->
+    <!-- Start Content + Footer -->
+    <div class="slide">
+        <div class="slide-img">
+            <img class="slide-img-content" src="img/worker1.jpg" alt="">
+        </div>
+        <div class="slide-content">
+            <h1>YOUR VISION <br> OUR MISSION </h1>
+            <p class="slide-p">Hello every body! My name is Son. I am learning from the Dong A University.<br> I hope to become a full-stack developer!!! </p>
+            <button type="button" class="btn btn-warning btn-large">LEARN MORE</button>
+        </div> 
+        <!-- Start list img -->
+        <div class="list-img">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="figure-item">
+                            <div class="figure-img">
+                                <a href=""><img src="img/list3.jpg" alt=""></a>
+                            </div>
+                            <div class="figure-content">
+                                <h2 style="font-weight: bold;">PLANNING & MODELLING</h2>
+                                <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit, sed diam nomummy nibh euismod
+                                tincidunt ut laoreet dolore magna aliquam erat.
+                                </p>
+                                <a href="" style="color: red; text-decoration: none;font-family: sans-serif;font-weight: bold">LEARN MORE</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="figure-item">
+                            <div class="figure-img">
+                                <a href=""><img src="img/list3.jpg" alt=""></a>
+                            </div>
+                            <div class="figure-content">
+                                <h2 style="font-weight: bold;">PLANNING & MODELLING</h2>
+                                <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit, sed diam nomummy nibh euismod
+                                tincidunt ut laoreet dolore magna aliquam erat.
+                                </p>
+                                <a href="" style="color: red; text-decoration: none;font-family: sans-serif;font-weight: bold">LEARN MORE</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="figure-item">
+                            <div class="figure-img">
+                                <a href=""><img src="img/list3.jpg" alt=""></a>
+                            </div>
+                            <div class="figure-content">
+                                <h2 style="font-weight: bold;">PLANNING & MODELLING</h2>
+                                <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit, sed diam nomummy nibh euismod
+                                tincidunt ut laoreet dolore magna aliquam erat.
+                                </p>
+                                <a href="" style="color: red; text-decoration: none;font-family: sans-serif;font-weight: bold">LEARN MORE</a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End list img -->
+        <div class="slide-img">
+            <img class="slide-img-content" src="img/worker2.jpg" alt="">
+            <div class="slide-content-banner slide-content">
+                <h1>MANAGING & LEADING <br>CONSTRUCTIONS SINCE 2020 </h1>
+                <p class="slide-p">Hello every body! My name is Son. I am learning from the Dong A University.<br> I hope to become a full-stack developer!!! </p>
+                <button id="slide-b" type="button" class="btn btn-warning btn-large">VIEW REFERENCES</button>
+            </div> 
+        </div>
+        <!-- Start list icon -->
+        <div class="list-icon">
+            <div class="container-fluid">
+                <div class="row text-center ">
+                    <div class="col-lg-3 col-md-3 col-12 py-4 my-3 border" id="list-icon-shadow">
+                        <i class="fas fa-home text-black-50 mb-3" style="font-size: 4em;"></i><br/>
+                        <h5>EASY TO USE</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 py-4 my-3 bg-dark border" id="list-icon-shadow">
+                        <i class="fas fa-clone text-black-50 mb-3" style="font-size: 4em; color: white;"></i><br/>
+                        <h5 style="color: white;">FREE UPDATES</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 py-4 my-3 border" id="list-icon-shadow">
+                        <i class="fas fa-wrench text-black-50 mb-3" style="font-size: 4em;"></i><br/>
+                        <h5>GREAT SUPPORT</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 py-4 my-3 bg-dark border" id="list-icon-shadow">
+                        <i class="fas fa-map text-black-50 mb-3" style="font-size: 4em; color: white;"></i><br/>
+                        <h5 style="color: white;">DOCUMETATION</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End list icon -->
+        <!-- Start Business -->
+        <div class="business">
+            <div class="container-fluid">
+                <div class="row text-dark">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <h1><b>THE BEST IN THE BUSINESS</b></h1>
+                        <p class="small">It loads and edits most of the existing sound formats³ out there (WAV (any), SF2 (Soundfont), AKP (Akai), Propellerheads Recycle, Native Instruments Battery, Kontakt *(nki), GIGA *(gig) & eMagic EXS24, ...) and
+                             it can even sample your existing VST instruments.
+                        </p>
+                        <i class="fas fa-check mr-3" style="color:yellow;"></i> 16 part must VST sampler.<br/>
+                        <i class="fas fa-check mr-3" style="color:yellow;"></i> 128 Voice Polyphony.<br/>
+                        <i class="fas fa-check mr-3" style="color:yellow;"></i> 128 programs.<br/>
+                        <i class="fas fa-check mr-3" style="color:yellow;"></i> Unlimited zones per program.<br/>
+                        <i class="fas fa-check mr-3" style="color:yellow;"></i> All sample supported.
+                        </h5>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <a href="">
+                            <img class="w-100" style="height: 280px; object-fit: contain; object-position: top;" src="https://www.toolware.co.nz/sites/default/files/tools2.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Business -->
+        <!-- Start Process -->
+        <div class="container-fluid process" style="background: black;">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <img class="img" src="https://www.roboticsbusinessreview.com/wp-content/uploads/2019/04/AdobeStock_180407318.jpeg" alt="">
+                    <div class="container-fluid text-center process-paint" style="color: white;">
+                        <h1><b>STEP BY STEP PROCESS</b></h1>
+                        <h6>Hello every body! My name is Son. I am learning from the Dong A University.<br> I hope to become a full-stack developer!!!</h6>
+                        <div class="row px-4 mt-4 process-row-paint">
+                            <div class="col">
+                                <img src="img/1.svg" class="image-step">
+                            </div>
+                            <div class="col"><hr class="hr-step"></div>
+                            <div class="col">
+                                <img src="img/2.svg" class="image-step">
+                            </div>
+                            <div class="col"><hr class="hr-step"></div>
+                            <div class="col">
+                                <img src="img/3.svg" class="image-step">
+                            </div>
+                            <div class="col"><hr class="hr-step"></div>
+                            <div class="col">
+                                <img src="img/4.svg" class="image-step">
+                            </div>
+                        </div>
+                        <div class="row px-4 my-4">
+                            <div class="col">
+                                <h2>Fruity Edition</h2>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <h2>Producer Edition</h2>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <h2>Signature Bundle</h2>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                                <h2>All Plugins Bundle</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End process -->
+        <!-- Start business 2 -->
+        <div class="business">
+            <div class="container-fluid">
+                <div class="row text-dark">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <a href="">
+                            <img class="business-2" src="img/worker.png">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12" id="business-2-content">
+                        <h1 class="business-h1-2"><b>THE BEST IN THE BUSINESS</b></h1>
+                        <h4 style="font-weight: 600;">Personal created music projects or added samples / presets / 3rd party plugins<br/><br/></4>
+                        <p>Studio does not make backups or saves personal created files outside of your computer.<br/>
+                            Personal files are backuped on your hard disc only.<br/>
+                            If you like more security for files you added to the program yourself, please regularly make a backup to an external source (USB, CD-ROM, cloud service, ...)
+                        </p>
+                        <button class="btn btn-large btn-warning p-3 mr-3" href="">LEAN MORE</button>
+                        <button class="btn btn-dark p-3" href="">BUY THE THEME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start footer -->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 bg-dark text-center py-2">
+                        <h4 style="color: aliceblue;font-weight: bold;">Copy 2020 by Jason - IT - UDA </h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- End Content + Footer -->
+</body>
+</html>
