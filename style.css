@@ -218,6 +218,7 @@ header .border-r{
     background-color: #eee; 
     width: 75%; 
     margin-top: 5vw;
+    margin-left: 12.5%;
 }
 /* End process */
 /* Start business 2 */
@@ -296,7 +297,7 @@ footer{
 }
 @media(max-width: 600px){
     #row-header{
-        height: 50px;
+        display: none;
     }
     .content{
         visibility: hidden;
@@ -362,6 +363,9 @@ footer{
     }
     .menu li ul.list-menu li a{
         padding: 10px 50px;
+    }
+    .list-img{
+        text-align: center;
     }
     .slide{
         position: absolute;
